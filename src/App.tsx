@@ -1,45 +1,38 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
+import React, {useState, useEffect} from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <div className="App">
+            <header className="mb-4">
+                <h1 className="text-center text-5xl">Video Chat App</h1>
+            </header>
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+            <main>
+                <div className="flex justify-center">
+                    <div>
+                        <h2 className="text-center text-4xl inline mr-6">Rooms</h2>
+                        <button
+                            className="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-green-500 hover:bg-green-700 text-left">Create
+                            new room
+                        </button>
+                    </div>
+
+                </div>
+                <ul>
+                    <li>
+                        <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+                            <div>
+                                <div className="text-xl font-medium text-black">ChitChat</div>
+                                <p className="text-gray-500">You have a new message!</p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </main>
+        </div>
+    )
 }
 
 export default App
