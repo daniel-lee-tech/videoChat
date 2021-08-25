@@ -1,15 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import './App.css'
 
 function App() {
     return (
-        <div className="App">
-            <header className="mb-4">
+        <div className="App bg-gray-600">
+            <header className="m-10">
                 <h1 className="text-center text-5xl">Video Chat App</h1>
+                <p className="text-right mt-2">By Daniel Lee</p>
             </header>
 
             <main>
-                <div className="flex justify-center">
+                <div className="flex justify-center mb-10">
                     <div>
                         <h2 className="text-center text-4xl inline mr-6">Rooms</h2>
                         <button
